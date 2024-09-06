@@ -11,6 +11,7 @@ export default class Select {
         element.style.display = 'none';
         //Insert custom select after our original select in the DOM
         element.after(this.customContainer);
+        this.value = this.selectedOption.value;
     }
     //Get option that's selected by default
     get selectedOption() {
@@ -34,6 +35,7 @@ export default class Select {
 
         newSelectedOption.selected = true;
         newSelectedOption.element.selected = true;
+        this.value = newSelectedOption.value;
 
         this.labelElement.innerText = newSelectedOption.label;
         //Remove .selected class from previous selected option
