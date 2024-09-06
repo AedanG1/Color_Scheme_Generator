@@ -1,0 +1,91 @@
+body {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+section#menu {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 18px;
+    z-index: 999;
+}
+
+button {
+    height: fit-content;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    display: inline-flex;
+    padding: 12px 11px;
+    border-radius: 4px;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+    cursor: pointer;
+
+    /* shadow/sm */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+input#color-picker {
+    width: 61px;
+    height: 42px;
+    flex-shrink: 0;
+    border: 0.5px solid #D1D5DB;
+    background: #E5E5E5;
+}
+
+section#colors {
+    display: flex;
+    width: fit-content;
+    margin: auto; 
+}
+
+section#colors > div {
+    width: 110px;
+    height: 550px;
+    box-shadow: 0px 32px 11px -32px rgba(0, 0, 0, 0.25) inset;
+    position: relative;
+}
+
+section#colors > div > p {
+    display: flex;
+    background-color: white;
+    padding: 12px 0px;
+    margin-left: -4px;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    width: 104%;
+    bottom: -10%;
+}
+
+#color-1 {
+    background-color: red;
+}
+
+#color-2 {
+    background-color: beige;
+}
+
+#color-3 {
+    background-color: blue;
+}
+
+#color-4 {
+    background-color: green;
+}
+
+#color-5 {
+    background-color: maroon;
+}
