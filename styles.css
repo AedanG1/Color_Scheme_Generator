@@ -93,3 +93,25 @@ section#colors > div > p > span {
 #color-5 {
     background-color: #A626D3;
 }
+
+#clipboard-message {
+    font-size: 12px;
+    width: 105%;
+    position: absolute;
+    left: -10%;
+    bottom: -18%;
+    border: 1px rgba(0, 0, 0, 0.25) solid;
+    padding: 12px 8px;
+    border-radius: 4px;
+}
+
+#clipboard-message::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.25) transparent;
+}

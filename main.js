@@ -19,6 +19,19 @@ submitButton.addEventListener('click', (e) => {
     getScheme(baseUrl, hexCode, mode, count);
 })
 
+colorSpans.forEach(span => {
+    span.addEventListener('click', function() {
+        navigator.clipboard.writeText(this.innerText);
+        const message = document.createElement('div');
+        message.id = 'clipboard-message';
+        message.innerText = 'Copied to clipboard!';
+        this.closest('div').append(message); 
+        setTimeout(() => {
+            message.remove();
+        }, 2000)
+    })
+})
+
 async function getScheme(url, hexCode, mode, count) {
     try {
         const response = await fetch(`${url}hex=${hexCode}&format=json&mode=${mode}&count=${count}`)
