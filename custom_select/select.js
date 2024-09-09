@@ -17,7 +17,7 @@ export default class Select {
     get selectedOption() {
         return this.options.find(option => option.selected);
     }
-
+    //Get the index of the current selected option
     get selectedOptionIndex() {
         return this.options.indexOf(this.selectedOption);
     }
@@ -32,9 +32,9 @@ export default class Select {
         //Set previous selected option selected attribute to false and new one to true
         previousSelectedOption.selected = false;
         previousSelectedOption.element.selected = false;
-
         newSelectedOption.selected = true;
         newSelectedOption.element.selected = true;
+        //Update value property to new selection
         this.value = newSelectedOption.value;
 
         this.labelElement.innerText = newSelectedOption.label;

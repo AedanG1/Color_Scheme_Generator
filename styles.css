@@ -12,11 +12,12 @@ section#menu {
 form {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 12px;
     padding: 24px 18px;
     z-index: 999;
+    width: 550px;
 }
 
 button {

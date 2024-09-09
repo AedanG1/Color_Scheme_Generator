@@ -21,14 +21,20 @@ submitButton.addEventListener('click', (e) => {
 
 colorSpans.forEach(span => {
     span.addEventListener('click', function() {
+        //Copy to clipboard
         navigator.clipboard.writeText(this.innerText);
+        //Confirmation message
+        const messageExists = document.getElementById('clipboard-message');
+        if (messageExists) {
+           messageExists.remove(); 
+        }
         const message = document.createElement('div');
         message.id = 'clipboard-message';
         message.innerText = 'Copied to clipboard!';
         this.closest('div').append(message); 
         setTimeout(() => {
             message.remove();
-        }, 2000)
+        }, 750)
     })
 })
 
